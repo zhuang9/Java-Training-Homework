@@ -11,16 +11,15 @@ public class BufferedReaderWriter {
 
 	public static void main(String[] args) {
 		BufferedReaderWriter brw = new BufferedReaderWriter();
-		brw.BufferedWriterExample();// Create a new file if the file not exists
-									// and write new content in it
+		brw.BufferedWriterExample();// Create a new file if the file not exists and write new content in it
 		brw.BufferedReaderExample(null);// Read the content from new file
 	}
 
 	void BufferedWriterExample() {
 
 		try {
+			
 			String content = "This is the content to write into file";
-
 			File file = new File("/Users/zhehuang/Desktop/New_File.txt");
 
 			// if file doesn't exists, then create it
@@ -43,11 +42,8 @@ public class BufferedReaderWriter {
 
 	void BufferedReaderExample(BufferedReader br) {
 		try {
-
 			String sCurrentLine;
-
 			br = new BufferedReader(new FileReader("/Users/zhehuang/Desktop/New_File.txt"));
-
 			while ((sCurrentLine = br.readLine()) != null) {
 				System.out.println(sCurrentLine);
 			}
